@@ -1,7 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
+
+	const location = useLocation();
+    console.log(location);
+
+	if(location.pathname === '/new-view') return null;
+
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
